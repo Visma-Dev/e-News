@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>e-Blog</title>
+
+
+    <!-- Подлкючение бутсрэпа -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- Подлкючение font-awesome -->
+    <script src="https://kit.fontawesome.com/2fc4dc419e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+<!-- Header -->
+<header class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <h1>
+                    <a href="index.html">e-News</a>
+                </h1>
+
+            </div>
+            <nav class="col-8">
+                <ul>
+                    <li><a id="href1" href="#">Главная</a></li>
+                    <li><a href="#">Последние статьи</a></li>
+                    <li><a href="#">Обзоры</a></li>
+                    <li><a href="#">
+                        Кабинет
+
+                    </a>
+                        <ul>
+                            <li><a href="#"><i class="fa-solid fa-user"></i> Админ панель</a></li>
+                            <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i> Выход</a></li>
+                        </ul>
+
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<!--Carousel-->
+<div class="container">
+    <div class="row">
+        <h2 class="carousel-title">Популярное:</h2>
+    </div>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img id="slider-img" src="img/carousel1.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5><a href="#">Dbrand выпустила чехлы, которые превращают смартфон в аналог Nothing Phone (1)</a></h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/carousel2.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5><a href="#">В сеть попали рекомендованные цены на десктопные видеокарты Intel Arc A770, A750 и A580</a></h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/carousel3.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5><a href="#">Google выпустила финальную бета-версию Android 13</a></h5>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+<!-- Main-block -->
+<div class="container-main">
+    <div class="content row">
+
+<!-- Posts -->
+        <div class="main-content col-md-8 col-12">
+            <h2>Последние:</h2>
+            <div class="post row">
+                <div class="post-text">
+                    <img src="img/post-1.webp" alt="post-photo">
+                    <h3>
+                        <a href="#">Утечка: новый Samsung Unpacked пройдёт 10 августа. На нём покажут Galaxy Z Flip 4</a>
+                    </h3>
+                    <div class="data-icons">
+                        <i class="far fa-calendar"> 18 Июля</i>
+                        <i class="far fa-user"> Константин Воронин</i>
+                    </div>
+                    <p class="preview-text">Инсайдер @evleaks опубликовал в Twitter рекламный постер, на котором написано, что следующее мероприятие Samsung Galaxy Unpacked стартует 10 августа 2022 года.</p>
+                    <i class="fa-solid fa-heart like action-icons"></i>
+                    <i class="fa-solid fa-heart-crack dislike action-icons"></i>
+                    <i class="fa-solid fa-comment action-icons"></i>
+                    <!--<div class="share-icons">
+                        <i class="fa-solid fa-share"></i>
+                    </div>-->
+                </div>
+            </div>
+            <div class="post row">
+                <div class="post-text">
+                    <img src="img/post-2.jpg" alt="post-photo">
+                    <h3>
+                        <a href="#">Китайский кроссовер OMODA C5 выйдет в России в октябре</a>
+                    </h3>
+                    <div class="data-icons">
+                        <i class="far fa-calendar"> 18 Июля</i>
+                        <i class="far fa-user"> Виталий Лейкин</i>
+                    </div>
+                    <p class="preview-text">В июне этого года компания АО «Чери автомобили рус» объявила о расширении своего присутствия в России и анонсировала запуск нового бренда OMODA. Тогда же сообщили, что первым в продажу поступит кроссовер OMODA C5, но сроков не назвали.</p>
+                    <i class="fa-solid fa-heart like action-icons"></i>
+                    <i class="fa-solid fa-heart-crack dislike action-icons"></i>
+                    <i class="fa-solid fa-comment action-icons"></i>
+                </div>
+            </div>
+            <div class="post row">
+                <div class="post-text">
+                    <img src="img/post-3.jpg" alt="post-photo">
+                    <h3>
+                        <a href="#">Odyssey Team анонсировала скорый релиз утилиты для джейлбрейка iOS 15</a>
+                    </h3>
+                    <div class="data-icons">
+                        <i class="far fa-calendar"> 18 Июля</i>
+                        <i class="far fa-user"> Генадий Никель</i>
+                    </div>
+                    <p class="preview-text">Команда Odyssey Team, которая уже выпускала решения по джейлбрейку предыдущих версий iOS, заявила о скором релизе утилиты для взлома iOS 15.</p>
+                    <i class="fa-solid fa-heart like action-icons"></i>
+                    <i class="fa-solid fa-heart-crack dislike action-icons"></i>
+                    <i class="fa-solid fa-comment action-icons"></i>
+                </div>
+            </div>
+            <div class="post row">
+                <div class="post-text">
+                    <img src="img/post-4.jpg" alt="post-photo">
+                    <h3>
+                        <a href="#">В Китае вышел Xiaomi F22 Pro — «король кнопочных телефонов» с Android 12</a>
+                    </h3>
+                    <div class="data-icons">
+                        <i class="far fa-calendar"> 17 Июля</i>
+                        <i class="far fa-user"> Владимир Сухой</i>
+                    </div>
+                    <p class="preview-text">На китайском рынке вышел Xiaomi F22 Pro — «король кнопочных телефонов». Именно так устройство описывает производитель.</p>
+                    <i class="fa-solid fa-heart like action-icons"></i>
+                    <i class="fa-solid fa-heart-crack dislike action-icons"></i>
+                    <i class="fa-solid fa-comment action-icons"></i>
+                </div>
+            </div>
+
+        </div>
+<!-- Sidebar -->
+        <div class="sidebar col-md-4 col-12">
+            <div class="section search">
+                <h3>Поиск</h3>
+                <form action="index.html" method="post">
+                    <input type="text" name="search-term" class="text-input" placeholder="по сайту">
+                </form>
+            </div>
+
+            <div class="section topics">
+                <h3>Разделы:</h3>
+                <ul>
+                    <li><a href="#">Технологии</a></li>
+                    <li><a href="#">Кино</a></li>
+                    <li><a href="#">Игры</a></li>
+                    <li><a href="#">Санкции</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Footer -->
+<footer class="container-fluid">
+        <div class="row">
+            <h3 class="logo">
+                <a href="index.html">e-News</a></h3>
+            <div class="socials">
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-vk"></i></a>
+                <a href="#"><i class="fa-brands fa-telegram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom w-100">
+        &copy; e-news.com | Designed by VISMA-DEV
+    </div>
+
+</footer>
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+
+
+
+</body>
+</html>

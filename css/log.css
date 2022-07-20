@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500&family=Montserrat:wght@300;400;500&family=Raleway:wght@300;400;500&display=swap');
+
+*{
+    font-family: Comfortaa;
+}
+
+input{
+    padding: 5px 5px;
+    display: block;
+    width: 100%;
+    border-style: solid;
+    border-radius: 8px;
+    border-width: 2px;
+    border-color: rgba(210, 9, 255, 0.18);
+    background: #292934;
+    color: #ffffff;
+    transition: 0.2s;
+    font-size: 15px;
+}
+input:hover{
+    border-color: #6222f7;
+    color: #ffffff;
+}
+body{
+    background: #292934;
+}
+
+/*--------HEADER---------*/
+header{
+    background: #121111;
+    height: 100px;
+}
+
+header * {
+    color: white;
+}
+
+header h1 {
+    margin-top: 20px;
+}
+
+header h1 a{
+    text-decoration: none;
+    font-family: Comfortaa;
+    color: rgba(210, 9, 255, 0.78);
+    transition: 0.5s;
+}
+
+header h1 a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+#href1{
+    color: #6238fc;
+}
+#href1:hover{
+    color: rgba(210, 9, 255, 0.78);
+}
+
+header ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: right;
+}
+
+header ul li{
+    float: left;
+    position: relative;
+}
+
+header ul li a{
+    display: block;
+    font-size: 1.3rem;
+    text-decoration: none;
+    padding: 35px;
+    transition: 0.5s;
+}
+
+header ul li a:hover{
+    background: rgba(0, 0, 0, 0.53);
+    color: rgba(210, 9, 255, 0.78);
+}
+
+header ul li ul {
+    position: absolute;
+    top: 100px;
+    width: 180px;
+    z-index: 300;
+    display: none;
+}
+
+header ul li:hover ul{
+    display: block;
+}
+
+header ul li ul li {
+    width:100%;
+}
+
+header ul li ul li a {
+    padding: 10px;
+    background: #6222f7;
+    color: rgba(0, 0, 0, 0.73);
+}
+
+/*-----form------*/
+form{
+    color: white;
+}
+.reg-form h2{
+    text-align: center;
+    margin-top: 134px;
+    margin-bottom: 25px;
+
+}
+form label{
+    margin-bottom: 8px;
+}
+.form-group{
+    margin-bottom: 25px;
+}
+form i{
+    color: rgba(154, 52, 255, 0.73);
+}
+.btn{
+    background: rgba(114, 65, 255, 0.83);
+    color: white;
+    margin-left: 2px;
+}
+
+.btn:hover{
+    background: rgba(114, 65, 255, 0.36);
+}
+form a{
+    transition: .2s;
+    color: white;
+    text-decoration: none;
+    margin-left: 200px;
+}
+form a:hover{
+    color: rgba(210, 9, 255, 0.78);
+}
+
+/*-----footer------*/
+footer{
+    margin-top: 185px;
+    background: #121111;
+    color: white;
+    position: relative;
+    text-align: center;
+}
+
+footer h3{
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+footer h3 a{
+    color: rgba(210, 9, 255, 0.78);
+    font-size: 40px;
+    margin-bottom: 10px;
+    transition: 1s;
+    text-decoration: none;
+    padding-top: 20px;
+}
+footer h3 a:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.socials{
+    margin-bottom: 20px;
+}
+.socials a{
+    font-size: 22px;
+    color: white;
+    padding-left:10px;
+    transition: .2s;
+}
+
+.socials a:first-child{
+    font-size: 22px;
+    color: white;
+    padding-left:0;
+    transition: .2s;
+}
+
+.socials a:hover{
+    color: #6238fc;
+}
+
+.footer-bottom{
+    background: #44445c;
+    color: white;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    position: absolute;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    font-size: 13px;
+}

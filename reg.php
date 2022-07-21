@@ -1,3 +1,4 @@
+<?php include("path.php");?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -15,35 +16,7 @@
 
 <body>
 <!-- Header -->
-<header class="container-fluid">
-    <div class="container">
-        <div class="row">
-            <div class="col-4">
-                <h1>
-                    <a href="index.php">e-News</a>
-                </h1>
-
-            </div>
-            <nav class="col-8">
-                <ul>
-                    <li><a id="href1" href="#">Главная</a></li>
-                    <li><a href="#">Последние статьи</a></li>
-                    <li><a href="#">Обзоры</a></li>
-                    <li><a href="#">
-                        Кабинет
-
-                    </a>
-                        <ul>
-                            <li><a href="#"><i class="fa-solid fa-user"></i> Админ панель</a></li>
-                            <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i> Выход</a></li>
-                        </ul>
-
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-</header>
+<?php include("app/include/header.php");?>
 
 <!-- Form -->
 <div class="container reg-form">
@@ -77,20 +50,5 @@
 </div>
 
 <!-- Footer -->
-<footer class="container-fluid">
-    <div class="row">
-        <h3 class="logo">
-            <a href="index.php">e-News</a></h3>
-        <div class="socials">
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
-            <a href="#"><i class="fa-brands fa-vk"></i></a>
-            <a href="#"><i class="fa-brands fa-telegram"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-        </div>
-    </div>
-    </div>
-    <div class="footer-bottom w-100">
-        &copy; e-news.com | Designed by VISMA-DEV
-    </div>
-
-</footer>
+<?php include("app/include/footer.php");?>
+</body>

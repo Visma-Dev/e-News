@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!-- Подлкючение font-awesome -->
     <script src="https://kit.fontawesome.com/2fc4dc419e.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
@@ -58,19 +58,19 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img id="slider-img" src="img/carousel1.jpg" class="d-block w-100" alt="...">
+                <img id="slider-img" src="assets/img/carousel1.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5><a href="#">Dbrand выпустила чехлы, которые превращают смартфон в аналог Nothing Phone (1)</a></h5>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="img/carousel2.jpg" class="d-block w-100" alt="...">
+                <img src="assets/img/carousel2.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5><a href="#">В сеть попали рекомендованные цены на десктопные видеокарты Intel Arc A770, A750 и A580</a></h5>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="img/carousel3.jpg" class="d-block w-100" alt="...">
+                <img src="assets/img/carousel3.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5><a href="#">Google выпустила финальную бета-версию Android 13</a></h5>
                 </div>
@@ -96,7 +96,7 @@
             <h2>Последние:</h2>
             <div class="post row">
                 <div class="post-text">
-                    <img src="img/post-1.webp" alt="post-photo">
+                    <img src="assets/img/post-1.webp" alt="post-photo">
                     <h3>
                         <a href="#">Утечка: новый Samsung Unpacked пройдёт 10 августа. На нём покажут Galaxy Z Flip 4</a>
                     </h3>
@@ -113,7 +113,7 @@
             </div>
             <div class="post row">
                 <div class="post-text">
-                    <img src="img/post-2.jpg" alt="post-photo">
+                    <img src="assets/img/post-2.jpg" alt="post-photo">
                     <h3>
                         <a href="#">Китайский кроссовер OMODA C5 выйдет в России в октябре</a>
                     </h3>
@@ -130,7 +130,7 @@
             </div>
             <div class="post row">
                 <div class="post-text">
-                    <img src="img/post-3.jpg" alt="post-photo">
+                    <img src="assets/img/post-3.jpg" alt="post-photo">
                     <h3>
                         <a href="#">Odyssey Team анонсировала скорый релиз утилиты для джейлбрейка iOS 15</a>
                     </h3>
@@ -147,7 +147,7 @@
             </div>
             <div class="post row">
                 <div class="post-text">
-                    <img src="img/post-4.jpg" alt="post-photo">
+                    <img src="assets/img/post-4.jpg" alt="post-photo">
                     <h3>
                         <a href="#">В Китае вышел Xiaomi F22 Pro — «король кнопочных телефонов» с Android 12</a>
                     </h3>

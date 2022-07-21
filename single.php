@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!-- Подлкючение font-awesome -->
     <script src="https://kit.fontawesome.com/2fc4dc419e.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/single.css">
+    <link rel="stylesheet" href="assets/css/single.css">
 </head>
 
 <body>
@@ -20,7 +20,7 @@
         <div class="row">
             <div class="col-4">
                 <h1>
-                    <a href="index.html">e-News</a>
+                    <a href="index.php">e-News</a>
                 </h1>
 
             </div>
@@ -54,14 +54,14 @@
             <h2>Утечка: новый Samsung Unpacked пройдёт 10 августа. На нём покажут Galaxy Z Flip 4</h2>
             <div class="single_post row">
                 <div class="post-text">
-                    <img src="img/post-1.webp" alt="post-photo">
+                    <img src="assets/img/post-1.webp" alt="post-photo">
                     <div class="data-icons">
                         <i class="far fa-calendar"> 18 Июля</i>
                         <i class="far fa-user"> Константин Воронин</i>
                     </div>
                     <p class="preview-text">Инсайдер @evleaks опубликовал в Twitter рекламный постер, на котором написано, что следующее мероприятие Samsung Galaxy Unpacked стартует 10 августа 2022 года.</p>
                     <p>На изображении показан новый складной смартфон Galaxy Z Flip 4 в фиолетовом цвете. Но это будет не единственная новинка — на этой же презентации состоится премьера Galaxy Z Fold 4, и, возможно, ещё нескольких устройств, включая умные часы Galaxy Watch 5.</p>
-                    <img src="img/post-1(2).jpg">
+                    <img src="assets/img/post-1(2).jpg">
                     <p>Ранее источники сообщали, что Samsung начнёт принимать предварительные заказы на новые складные смартфоны с 16 августа, а в продажу они якобы поступят в конце месяца.</p>
                     <i class="fa-solid fa-heart like action-icons"></i>
                     <i class="fa-solid fa-heart-crack dislike action-icons"></i>
@@ -77,7 +77,7 @@
         <div class="sidebar col-md-4 col-12">
             <div class="section search">
                 <h3>Поиск</h3>
-                <form action="index.html" method="post">
+                <form action="index.php" method="post">
                     <input type="text" name="search-term" class="text-input" placeholder="по сайту">
                 </form>
             </div>
@@ -99,7 +99,7 @@
 <footer class="container-fluid">
     <div class="row">
         <h3 class="logo">
-            <a href="index.html">e-News</a></h3>
+            <a href="index.php">e-News</a></h3>
         <div class="socials">
             <a href="#"><i class="fa-brands fa-youtube"></i></a>
             <a href="#"><i class="fa-brands fa-vk"></i></a>

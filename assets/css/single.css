@@ -213,12 +213,12 @@ header ul li ul li a {
     transition: all 0.3s;
     text-decoration: none;
     font-weight: 500;
-    color: #7241ff;
+    color: #ffffff;
     font-size: 1.1em;
 }
 .sidebar .topics ul li a:hover{
     padding-left: 10px;
-    color: rgba(210, 9, 255, 0.78);
+    color: rgba(140, 9, 255, 0.78);
 }
 
 

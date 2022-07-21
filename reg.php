@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!-- Подлкючение font-awesome -->
     <script src="https://kit.fontawesome.com/2fc4dc419e.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/reg.css">
+    <link rel="stylesheet" href="assets/css/reg.css">
 </head>
 
 <body>
@@ -20,7 +20,7 @@
         <div class="row">
             <div class="col-4">
                 <h1>
-                    <a href="index.html">e-News</a>
+                    <a href="index.php">e-News</a>
                 </h1>
 
             </div>
@@ -71,7 +71,7 @@
         <div class="w-100"></div>
         <div class="form-group col-12 col-md-4">
             <button type="submit" class="btn">Отправить</button>
-            <a href="log.html">Или же Войти</a>
+            <a href="log.php">Или же Войти</a>
         </div>
     </form>
 </div>
@@ -80,7 +80,7 @@
 <footer class="container-fluid">
     <div class="row">
         <h3 class="logo">
-            <a href="index.html">e-News</a></h3>
+            <a href="index.php">e-News</a></h3>
         <div class="socials">
             <a href="#"><i class="fa-brands fa-youtube"></i></a>
             <a href="#"><i class="fa-brands fa-vk"></i></a>

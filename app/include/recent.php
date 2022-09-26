@@ -6,7 +6,7 @@
             <h2>Последние:</h2>
             <div class="post row">
                 <div class="post-text">
-                    <img src="assets/img/post-1.webp" alt="post-photo">
+                    <a href="#"><img src="assets/img/post-1.webp" alt="post-photo"></a>
                     <h3>
                         <a href="#">Утечка: новый Samsung Unpacked пройдёт 10 августа. На нём покажут Galaxy Z Flip 4</a>
                     </h3>
@@ -23,7 +23,7 @@
             </div>
             <div class="post row">
                 <div class="post-text">
-                    <img src="assets/img/post-2.jpg" alt="post-photo">
+                    <a href="#"><img src="assets/img/post-2.jpg" alt="post-photo"></a>
                     <h3>
                         <a href="#">Китайский кроссовер OMODA C5 выйдет в России в октябре</a>
                     </h3>
@@ -40,7 +40,7 @@
             </div>
             <div class="post row">
                 <div class="post-text">
-                    <img src="assets/img/post-3.jpg" alt="post-photo">
+                    <a href="#"><img src="assets/img/post-3.jpg" alt="post-photo"></a>
                     <h3>
                         <a href="#">Odyssey Team анонсировала скорый релиз утилиты для джейлбрейка iOS 15</a>
                     </h3>
@@ -57,7 +57,7 @@
             </div>
             <div class="post row">
                 <div class="post-text">
-                    <img src="assets/img/post-4.jpg" alt="post-photo">
+                    <a href="#"><img src="assets/img/post-4.jpg" alt="post-photo"></a>
                     <h3>
                         <a href="#">В Китае вышел Xiaomi F22 Pro — «король кнопочных телефонов» с Android 12</a>
                     </h3>

@@ -1,4 +1,3 @@
-<!-- Header -->
 <header class="container-fluid">
     <div class="container">
         <div class="row">
@@ -25,6 +24,10 @@
                     </li>
                 </ul>
             </nav>
+
+            <button class="burger" type="button">
+                <span class="burger__item"></span>
+            </button>
         </div>
     </div>
 </header>

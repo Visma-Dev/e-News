@@ -26,6 +26,7 @@ body{
 }
 
 /*--------HEADER---------*/
+
 header{
     background: #121111;
     height: 100px;
@@ -113,10 +114,7 @@ header ul li ul li a {
     color: white;
 }
 
-carousel{
-    height: 400px;
 
-}
 .carousel-inner, .carousel-item{
     height: 450px;
     border-radius: 20px;
@@ -168,7 +166,7 @@ carousel{
 .main-content h2{
     margin-top: 30px;
     margin-bottom: 20px;
-    color: white;
+    color: #5119d3;;
 }
 
 .main-content .post{
@@ -325,4 +323,135 @@ footer h3 a:hover{
     padding-top: 20px;
     padding-bottom: 15px;
     font-size: 13px;
+}
+
+/*-----burger------*/
+.burger{
+    display: none;
+    padding: 15px 0;
+
+    margin-top: 30px;
+    margin-right: 35px  ;
+    width: 30px;
+    position: absolute;
+    right: 0;
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+
+.burger__item{
+    display: block;
+    width: 30px;
+    height: 3px;
+
+    background-color: #6238fc;
+
+    position: relative;
+}
+
+.burger__item::before,
+.burger__item::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+
+    background-color: #6238fc;
+
+    position: absolute;
+    left: 0;
+    z-index: 1;
+}
+
+.burger__item::before{
+    top: -9px
+}
+
+.burger__item::after {
+    bottom:-9px
+}
+
+/*-----@media------*/
+
+@media (max-width: 1400px) {
+
+    nav ul li a{
+       padding-right: 5px;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    nav ul li a{
+        font-size: 18px;
+     }
+    
+}
+
+@media (max-width: 1000px) {
+
+    .container{
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    header h1{
+        margin-left: 35px;
+        margin-top: 18px;
+        font-size: 42px;
+    }
+
+    .col-8{
+        width: 100px;
+    }
+    nav ul li{
+        display: none;
+     }
+
+    .burger{
+        display: flex;
+        right: 0;
+    }
+
+
+    
+}
+
+@media (max-width: 767px) {
+   
+    header h1{
+        margin-left: 0;
+    }
+
+    .carousel-title{
+        margin-left: 10px;
+    }
+    .carousel-inner{
+        height: 200px;
+    }
+    .carousel-indicators{
+        display: none;
+    }
+
+    .carousel-caption{
+        z-index: 1;
+    }
+
+    .main-content .post{
+        margin: 0 0;
+    }
+
+    .post img{
+        padding: 0 0;
+        margin-top: 20px;
+    }
+    .main-content .post h3 a{
+        font-size: 23px;
+    }
+
+    .main-content .post p{
+        font-size: 15px;
+    }
+
+
 }

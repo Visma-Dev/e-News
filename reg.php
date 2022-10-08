@@ -1,4 +1,8 @@
-<?php include("path.php");?>
+<?php
+    include("path.php");
+    include("app/controllers/users.php");
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -20,30 +24,30 @@
 
 <!-- Form -->
 <div class="container reg-form">
-    <form class="row justify-content-center" method="post" action="reg.html">
+    <form class="row justify-content-center" method="post" action="reg.php">
         <h2>Регистрация</h2>
         <div class="form-group col-12 col-md-4">
             <label for="exampleInputLogin"><i class="fa-solid fa-hashtag"></i> Ваше имя на сайте (только латиница)</label>
-            <input type="email" class="form-control" id="exampleInputLogin" aria-describedby="emailHelp" placeholder="Введите логин">
+            <input name="login" type="text" class="form-control" id="exampleInputLogin" aria-describedby="emailHelp" placeholder="Введите логин">
         </div>
         <div class="w-100"></div>
         <div class="form-group col-12 col-md-4">
             <label for="exampleInputEmail1"><i class="fa-solid fa-envelope"></i> Email</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите свой почтовый ящик">
+            <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите свой почтовый ящик">
         </div>
         <div class="w-100"></div>
         <div class="form-group col-12 col-md-4">
             <label for="exampleInputPassword1"><i class="fa-solid fa-lock"></i> Пароль</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Введите пароль">
+            <input name="pass_f" type="password" class="form-control" id="exampleInputPassword1" placeholder="Введите пароль">
         </div>
         <div class="w-100"></div>
         <div class="form-group col-12 col-md-4">
-            <label for="exampleInputPassword1"><i class="fa-solid fa-key"></i> Подтвердите пароль</label>
-            <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Повторно введите и запомните пароль">
+            <label for="exampleInputPassword2"><i class="fa-solid fa-key"></i> Подтвердите пароль</label>
+            <input name="pass_s" type="password" class="form-control" id="exampleInputPassword2" placeholder="Повторно введите и запомните пароль">
         </div>
         <div class="w-100"></div>
         <div class="form-group col-12 col-md-4">
-            <button type="submit" class="btn">Отправить</button>
+            <button type="submit" class="btn" name="reg_btn">Отправить</button>
             <a href="log.php">Или же Войти</a>
         </div>
     </form>

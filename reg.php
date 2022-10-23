@@ -28,22 +28,27 @@
         <h2>Регистрация</h2>
         <div class="form-group col-12 col-md-4">
             <label for="exampleInputLogin"><i class="fa-solid fa-hashtag"></i> Ваше имя на сайте (только латиница)</label>
-            <input name="login" type="text" class="form-control" id="exampleInputLogin" aria-describedby="emailHelp" placeholder="Введите логин">
+            <input name="login" value="<?=$login?>" type="text" class="form-control" id="exampleInputLogin" aria-describedby="emailHelp" placeholder="Введите логин">
         </div>
         <div class="w-100"></div>
         <div class="form-group col-12 col-md-4">
             <label for="exampleInputEmail1"><i class="fa-solid fa-envelope"></i> Email</label>
-            <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите свой почтовый ящик">
+            <input name="email" value="<?=$email?>" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите свой почтовый ящик">
         </div>
         <div class="w-100"></div>
         <div class="form-group col-12 col-md-4">
             <label for="exampleInputPassword1"><i class="fa-solid fa-lock"></i> Пароль</label>
-            <input name="pass_f" type="password" class="form-control" id="exampleInputPassword1" placeholder="Введите пароль">
+            <input name="pass_f" type="password" class="form-control" id="exampleInputPassword1" placeholder="Придуймайте пароль">
         </div>
         <div class="w-100"></div>
         <div class="form-group col-12 col-md-4">
             <label for="exampleInputPassword2"><i class="fa-solid fa-key"></i> Подтвердите пароль</label>
             <input name="pass_s" type="password" class="form-control" id="exampleInputPassword2" placeholder="Повторно введите и запомните пароль">
+        </div>
+        <div class="w-100"></div>
+        <!-- errMessage -->
+        <div class="form-group col-12 col-md-4 error">
+            <p><?php echo $errMessage?></p>
         </div>
         <div class="w-100"></div>
         <div class="form-group col-12 col-md-4">

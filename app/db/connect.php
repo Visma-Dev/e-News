@@ -4,7 +4,7 @@ $driver = "mysql";
 $host = "localhost";
 $db_name = "e-news";
 $db_user = "root";
-$db_pass = "mysql";
+$db_pass = "root";
 $charset = "utf8";
 $options = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, // базовые атрибуты pdo для обработки ошибок
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC]; // атрибут для выбора вида возвращаемого массива. В данном случае, выбрали ассоциативный.

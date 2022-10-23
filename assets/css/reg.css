@@ -106,6 +106,14 @@ header ul li ul li a {
 }
 
 /*-----form------*/
+
+form div.error {
+    color: rgba(255, 0, 75, 0.89);
+}
+form div.error i{
+    color: #ff004b;
+}
+
 form{
     color: white;
 }

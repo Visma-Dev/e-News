@@ -52,7 +52,7 @@
         </div>
         <div class="w-100"></div>
         <div class="form-group col-12 col-md-4">
-            <button type="submit" class="btn" name="reg_btn">Отправить</button>
+            <button type="submit" class="btn" name="btn_reg">Отправить</button>
             <a href="log.php">Или же Войти</a>
         </div>
     </form>

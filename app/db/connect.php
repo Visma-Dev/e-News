@@ -1,7 +1,8 @@
 <?php
+session_start();
 
 $driver = "mysql";
-$host = "localhost";
+$host = "127.0.0.1";
 $db_name = "e-news";
 $db_user = "root";
 $db_pass = "root";

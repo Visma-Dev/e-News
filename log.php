@@ -1,4 +1,7 @@
-<?php include("path.php");?>
+<?php
+include("path.php");
+include("app/controllers/users.php");
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -20,20 +23,25 @@
 
 <!-- Form -->
 <div class="container reg-form">
-    <form class="row justify-content-center" method="post" action="log.html">
+    <form class="row justify-content-center" method="post" action="log.php">
         <h2>Вход</h2>
         <div class="form-group col-12 col-md-4">
-            <label for="exampleInputLogin"><i class="fa-solid fa-hashtag"></i> Ваше имя на сайте (только латиница)</label>
-            <input type="login" class="form-control" id="exampleInputLogin" aria-describedby="emailHelp" placeholder="Введите логин">
+            <label for="exampleInputEmail1"><i class="fa-solid fa-hashtag"></i> Email, указанный при регистрации</label>
+            <input name="email" value="<?=$email?>" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите свой почтовый ящик">
         </div>
         <div class="w-100"></div>
         <div class="form-group col-12 col-md-4">
             <label for="exampleInputPassword1"><i class="fa-solid fa-lock"></i> Пароль</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Введите пароль">
+            <input name="pass" type="password" class="form-control" id="exampleInputPassword1" placeholder="Введите пароль">
+        </div>
+        <div class="w-100"></div>
+        <!-- errMessage -->
+        <div class="form-group col-12 col-md-4 error">
+            <p><?php echo $errMessage?></p>
         </div>
         <div class="w-100"></div>
         <div class="form-group col-12 col-md-4">
-            <button type="submit" class="btn">Войти</button>
+            <button type="submit" class="btn" name = "btn_log">Войти</button>
             <a href="reg.php">Регистрация</a>
         </div>
     </form>

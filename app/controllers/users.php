@@ -1,5 +1,6 @@
 <?php
 include "app/db/functions.php";
+include "path.php";
 
 $errMessage = '';
 
@@ -11,10 +12,12 @@ function sessionStart($arr){
     $_SESSION['admin'] = $arr['admin'];
 
     if ($_SESSION['admin']){
-        header('location' . BASE_URL . 'admin/admin.php');
+        header('location:' . BASE_URL . 'admin/posts/index.php');
+    }else{
+        // редирект на главную
+        header('location: ' . BASE_URL );
     }
-    // редирект на главную
-    header('location: ' . BASE_URL );
+
 }
 
 
@@ -82,7 +85,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btn_log'])) { // зд�
     else{
         $exCheck = selectOne('users', ['email' => $email]);
         if ($exCheck && password_verify($pass, $exCheck['pass'])){ // password_verify — Проверяет, соответствует ли пароль хешу
-            sessionStart($exCheck); // Здесь зачем-то реализовали этот код
+            sessionStart($exCheck); // Старт сессии
         }else{
             $errMessage = 'Ошибка входа, проверь введенные данные.';
         }

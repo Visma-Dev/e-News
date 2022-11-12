@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500&family=Montserrat:wght@300;400;500&family=Raleway:wght@300;400;500&display=swap');
+
+*{
+    font-family: Comfortaa;
+}
+
+input{
+    padding: 5px 5px;
+    display: block;
+    width: 100%;
+    border-style: solid;
+    border-radius: 8px;
+    border-width: 2px;
+    border-color: rgba(210, 9, 255, 0.18);
+    background: #292934;
+    color: #ffffff;
+    transition: 0.2s;
+    font-size: 15px;
+}
+input:hover{
+    border-color: #6222f7;
+    color: #ffffff;
+}
+body{
+    background: #292934;
+}
+
+/*
+SIDEBAR
+ */
+
+.sidebar{
+    margin: 1rem 0;
+    background: rgb(33, 33, 33);
+    min-height: 600px;
+    border-width: 10px;
+    border-color: #ff004b;
+    border-radius: 10px;
+}
+
+.sidebar ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: #000000;
+}
+
+.sidebar ul a{
+    padding: 18px;
+    display: block;
+    border-bottom: 1px solid #6238fc;
+    text-decoration: none;
+    color: #ffffff;
+
+    transition: 0.4s;
+}
+
+.sidebar ul a:hover{
+    color: rgb(109, 109, 109);
+}
+
+/*
+POSTS
+ */
+
+.posts{
+    padding: 25px 10px;
+    color: white;
+    height: 100%;
+}
+
+.posts h1{
+    padding-bottom: 25px;
+}
+
+.buttons{
+    padding-bottom: 10px;
+
+}
+
+.btn{
+    border-radius: 25px;
+    text-decoration: none;
+    color: white;
+    max-width: 135px;
+    height: 40px;
+    text-align: center;
+    transition: 0.5s;
+    font-size: 15px;
+}
+
+.btn-create{
+    background-color: #21d188;
+
+    margin: 0 15px;
+
+}
+
+.btn-create:hover{
+    background-color: #02c680;
+    color: white;
+}
+
+.btn-manage{
+    background-color: #7f09f5;
+}
+
+.title-table div{
+    padding: 15px;
+    text-align: center;
+    border: 3px solid #6238fc;
+    border-radius: 2px;
+}
+
+.post div{
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #6238fc;
+    border-radius: 5px;
+}
+
+.edit{
+    color: #abfe13;
+}
+.del{
+    color: rgb(166, 32, 72);
+}
+
+
+/*
+creat.php
+ */
+
+.ck{
+    color: black;
+}
+
+.add div{
+    padding: 8px 0;
+    font-size: 15px;
+}

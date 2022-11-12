@@ -17,11 +17,11 @@
                         <!-- Альтернативный синтаксис управляющих структур -->
                         <?php if (isset($_SESSION['id'])): ?> <!-- этот блок будет показываться только если пользователь зарегистрирован -->
                             <a href="#">
-                                <?php echo $_SESSION['login']; ?>
+                                <?php echo $_SESSION['login']; ?> <!-- выводим никнейм -->
                             </a>
                             <ul>
                                 <?php if ($_SESSION['admin']): ?> <!-- проверка на админность (базированность) пользователя -->
-                                    <li><a href="#"><i class="fa-solid fa-user"></i> Админ панель</a></li>
+                                    <li><a href="/admin/posts/index.php"><i class="fa-solid fa-user"></i> Админ панель</a></li>
                                 <?php endif; ?>
                                 <li><a href="<?php echo BASE_URL . "logout.php"; ?>"><!--  --><i class="fa-solid fa-right-from-bracket"></i> Выход</a></li>
                             </ul>

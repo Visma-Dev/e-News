@@ -1,7 +1,7 @@
 <?php include("../../path.php");
 
-    include '../../app/db/connect.php';
-    include "../../app/controllers/categories.php";
+include '../../app/db/connect.php';
+include '../../app/controllers/categories.php';
 
 session_start();
 ?>
@@ -29,27 +29,32 @@ session_start();
     <div class="row">
         <?php include '../../app/include/sidebar-admin.php';?>
         <div class="col-1"></div>
-        <!-- Категории -->
+        <!-- Создание Категории -->
         <div class="posts col-8">
-            <h1>Управление категориями:</h1>
+            <h1>Редактирование категории:</h1>
             <div class="buttons row col-5">
-                <a href="create.php" class="col-4 btn btn-create">Добавить</a>
+                <a href="index.php" class="col-4 btn btn-manage">Управление</a>
             </div>
-            <!-- заголовки разделов -->
-            <div class="row title-table">
-                <div class="id col-1">id</div>
-                <div class="title col-5">Название</div>
-                <div class="col-4">Изменение</div>
+            <div class="row add">
+                <form action="edit.php" method="post">
+                    <div class="col">
+                        <input name="name" value="<?= $name;?>" type="text" class="form-control" placeholder="Название" aria-label="Название Категории">
+                        <div class="col">
+                            <label for="content" class="form-label">Описание категории</label>
+                            <textarea name="description" class="form-control" id="content" rows="6" placeholder="Текст"><?=$description?></textarea>
+                        </div>
+                        <!-- errMessage -->
+                        <div class="form-group col-12 col-md-4 error">
+                            <p><?php echo $errMessage?></p>
+                        </div>
+                        <div class="col">
+                            <button name="edit" class="btn btn-primary" type="submit">Сохранить</button>
+                        </div>
+                    </div>
+
+                    <input name="id" value="<?=$id;?>" type="hidden">
+                </form>
             </div>
-            <!-- вывод категорий из бд через цикл -->
-            <?php foreach ($categories as $key => $category): ?>
-            <div class="row post">
-                <div class="id col-1"><?=$key + 1; ?></div> <!-- к id прибавляем 1, т.к. в массиве список id начинается с 0 -->
-                <div class="title col-5"><?=$category['name'];?></div>
-                <div class="edit col-2"><a href="edit.php?id=<?=$category['id'];?>">Редакт.</a></div>
-                <div class="del col-2"><a href="edit.php?del_id=<?=$category['id'];?>">Удалить</a></div>
-            </div>
-            <?php endforeach;?>
         </div>
     </div>
 </div>

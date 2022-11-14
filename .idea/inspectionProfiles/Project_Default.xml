@@ -6,5 +6,6 @@
         <language minSize="68" name="PHP" />
       </Languages>
     </inspection_tool>
+    <inspection_tool class="PhpVoidFunctionResultUsedInspection" enabled="false" level="WARNING" enabled_by_default="false" />
   </profile>
 </component>

@@ -92,8 +92,6 @@ POSTS
 .btn-create{
     background-color: #21d188;
 
-    margin: 0 15px;
-
 }
 
 .btn-create:hover{
@@ -115,17 +113,20 @@ POSTS
 .post div{
     padding: 15px;
     text-align: left;
-    border: 1px solid #6238fc;
-    border-radius: 5px;
+        border: 1px solid #6238fc;
+        border-radius: 5px;
 }
 
-.edit{
+.edit a{
     color: #abfe13;
+    text-decoration: none;
+    font-size: 15px;
 }
-.del{
-    color: rgb(166, 32, 72);
+.del a{
+    color: rgb(192, 6, 62);
+    text-decoration: none;
+    font-size: 15px;
 }
-
 
 /*
 creat.php
@@ -138,4 +139,8 @@ creat.php
 .add div{
     padding: 8px 0;
     font-size: 15px;
+}
+
+.error{
+    color: #ff004b;
 }

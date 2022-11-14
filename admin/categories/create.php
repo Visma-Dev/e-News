@@ -1,5 +1,7 @@
 <?php include("../../path.php");
-include '../../app/db/connect.php';
+
+    include '../../app/db/connect.php';
+    include '../../app/controllers/categories.php';
 
 session_start();
 ?>
@@ -31,19 +33,22 @@ session_start();
         <div class="posts col-8">
             <h1>Создание Категории:</h1>
             <div class="buttons row col-5">
-                <a href="create.php" class="col-4 btn btn-create">Добавить</a>
                 <a href="index.php" class="col-4 btn btn-manage">Управление</a>
             </div>
             <div class="row add">
                 <form action="create.php" method="post">
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Название" aria-label="Название Категории">
+                        <input name="name" value="<?= $name;?>" type="text" class="form-control" placeholder="Название" aria-label="Название Категории">
                         <div class="col">
                             <label for="content" class="form-label">Описание категории</label>
-                            <textarea class="form-control" id="content" rows="6" placeholder="Текст"></textarea>
+                            <textarea name="description" class="form-control" id="content" rows="6" placeholder="Текст"><?=$description?></textarea>
+                        </div>
+                        <!-- errMessage -->
+                        <div class="form-group col-12 col-md-4 error">
+                            <p><?php echo $errMessage?></p>
                         </div>
                         <div class="col">
-                            <button class="btn btn-primary" type="submit">Публикация</button>
+                            <button name="create" class="btn btn-primary" type="submit">Публикация</button>
                         </div>
                     </div>
                 </form>

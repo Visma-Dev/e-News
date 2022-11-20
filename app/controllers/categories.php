@@ -1,13 +1,12 @@
 <?php
-
-include "../../app/db/functions.php";
+include DIR_ROOT."/app/db/functions.php";
 
 $errMessage = '';
 $id = '';
 $name = '';
 $description = '';
 
-$categories = selectAll('categories');
+$categories = selectAll('categories'); //присваиваем названия категорий, для дальнейшего вывода через цикл в админке и /
 
 //! Создание категории (делаем по аналогии с регистрацией юзеров)
 if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['create'])) { //Переменная $_SERVER - это массив, содержащий информацию, такую как: заголовки, пути и местоположения скриптов.
@@ -87,8 +86,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['edit'])) { //Пере�
 //! Удаление
 if($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['del_id'])){ // если находим в get запросе строку "del_id", то:
 
-    // получаем id выбранной категории
-    $id = $_GET['del_id'];
+    $id = $_GET['del_id'];// получаем id выбранной категории
     delete('categories', $id);
     header('location: ' . BASE_URL . 'admin/categories/index.php' );
 }

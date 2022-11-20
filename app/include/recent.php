@@ -1,3 +1,7 @@
+<?php
+include ("app/controllers/categories.php");
+
+?>
 <div class="container-main">
     <div class="content row">
 
@@ -6,7 +10,7 @@
             <h2>Последние:</h2>
             <div class="post row">
                 <div class="post-text">
-                    <a href="#"><img src="assets/img/post-1.webp" alt="post-photo"></a>
+                    <a href="#"><img src="/assets/img/post-1.webp" alt="post-photo"></a>
                     <h3>
                         <a href="#">Утечка: новый Samsung Unpacked пройдёт 10 августа. На нём покажут Galaxy Z Flip 4</a>
                     </h3>
@@ -23,7 +27,7 @@
             </div>
             <div class="post row">
                 <div class="post-text">
-                    <a href="#"><img src="assets/img/post-2.jpg" alt="post-photo"></a>
+                    <a href="#"><img src="/assets/img/post-2.jpg" alt="post-photo"></a>
                     <h3>
                         <a href="#">Китайский кроссовер OMODA C5 выйдет в России в октябре</a>
                     </h3>
@@ -40,7 +44,7 @@
             </div>
             <div class="post row">
                 <div class="post-text">
-                    <a href="#"><img src="assets/img/post-3.jpg" alt="post-photo"></a>
+                    <a href="#"><img src="/assets/img/post-3.jpg" alt="post-photo"></a>
                     <h3>
                         <a href="#">Odyssey Team анонсировала скорый релиз утилиты для джейлбрейка iOS 15</a>
                     </h3>
@@ -57,7 +61,7 @@
             </div>
             <div class="post row">
                 <div class="post-text">
-                    <a href="#"><img src="assets/img/post-4.jpg" alt="post-photo"></a>
+                    <a href="#"><img src="/assets/img/post-4.jpg" alt="post-photo"></a>
                     <h3>
                         <a href="#">В Китае вышел Xiaomi F22 Pro — «король кнопочных телефонов» с Android 12</a>
                     </h3>
@@ -78,7 +82,7 @@
         <div class="sidebar col-md-4 col-12">
             <div class="section search">
                 <h3>Поиск</h3>
-                <form action="index.html" method="post">
+                <form action="recent.php" method="post">
                     <input type="text" name="search-term" class="text-input" placeholder="по сайту">
                 </form>
             </div>
@@ -86,10 +90,11 @@
             <div class="section topics">
                 <h3>Разделы:</h3>
                 <ul>
-                    <li><a href="#">Технологии</a></li>
-                    <li><a href="#">Кино</a></li>
-                    <li><a href="#">Игры</a></li>
-                    <li><a href="#">Санкции</a></li>
+                    <?php
+
+                    foreach ($categories as $key => $category): ?>
+                    <li><a href="#"><?=$category['name']; ?></a></li>
+                    <?php endforeach; ?>
                 </ul>
             </div>
 

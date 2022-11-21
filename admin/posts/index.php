@@ -32,7 +32,6 @@ session_start();
             <h1>Управление статьями:</h1>
             <div class="buttons row col-5">
                 <a href="create.php" class="col-4 btn btn-create">Создать</a>
-                <a href="index.php" class="col-4 btn btn-manage">Управление</a>
             </div>
             <div class="row title-table">
                 <div class="id col-1">id</div>

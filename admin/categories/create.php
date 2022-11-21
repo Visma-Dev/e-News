@@ -2,8 +2,6 @@
 
     include '../../app/db/connect.php';
     include '../../app/controllers/categories.php';
-
-session_start();
 ?>
 <!doctype html>
 <html lang="en">

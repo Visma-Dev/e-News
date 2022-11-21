@@ -1,7 +1,8 @@
 <?php include("../../path.php");
 include '../../app/db/connect.php';
+include '../../app/controllers/posts.php';
 
-session_start();
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -31,32 +32,30 @@ session_start();
         <div class="posts col-8">
             <h1>Создание Статьи:</h1>
             <div class="buttons row col-5 mb-4">
-                <a href="create.php" class="col-4 btn btn-create">Создать</a>
                 <a href="index.php" class="col-4 btn btn-manage">Управление</a>
             </div>
             <div class="row add-post">
                 <form action="create.php" method="post">
                     <div class="col">
                         <div class="col mb-4">
-                        <input type="text" class="form-control" placeholder="Название" aria-label="Название Статьи">
+                        <input name="title" type="text" class="form-control" placeholder="Название" aria-label="Название Статьи">
                         </div>
                         <div class="col mb-3">
-                            <label for="editor" class="form-label">Содержимое статьи</label>
-                            <textarea id="editor" class="form-control" rows="6"></textarea>
+                            <label  for="editor" class="form-label">Содержимое статьи</label>
+                            <textarea name="content" id="editor" class="form-control" rows="6"></textarea>
                         </div>
                         <div class="input-group col mb-4">
-                            <input type="file" class="form-control" id="inputGroupFile02">
+                            <input name="img" type="file" class="form-control" id="inputGroupFile02">
                             <label class="input-group-text" for="inputGroupFile02">Медиафайлы</label>
                         </div>
                         <label for="content" class="form-label">Категория</label>
-                        <select class="form-select mb-4" aria-label="Default select example">
-                            <option selected>Технологии</option>
-                            <option value="1">Кино</option>
-                            <option value="2">Игры</option>
-                            <option value="3">Санкции</option>
+                        <select name="category" class="form-select mb-4" aria-label="Default select example">
+                            <?php foreach ($categories as $key => $category): ?>
+                            <option value="<?=$key + 1 ?>"><?=$category['name']?></option>
+                            <?php endforeach; ?>
                         </select>
                         <div class="col">
-                            <button class="btn btn-primary" type="submit">Публикация</button>
+                            <button name="add_post" class="btn btn-primary" type="submit">Публикация</button>
                         </div>
                     </div>
                 </form>

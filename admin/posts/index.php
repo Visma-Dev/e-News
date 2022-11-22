@@ -1,7 +1,6 @@
-<?php include("../../path.php");
-include '../../app/db/connect.php';
-
-session_start();
+<?php
+    include("../../path.php");
+    include "../../app/controllers/posts.php";
 ?>
 <!doctype html>
 <html lang="en">
@@ -28,37 +27,33 @@ session_start();
         <?php include '../../app/include/sidebar-admin.php';?>
         <div class="col-1"></div>
         <!-- Статьи -->
-        <div class="posts col-8">
+        <div class="posts col-9">
             <h1>Управление статьями:</h1>
             <div class="buttons row col-5">
                 <a href="create.php" class="col-4 btn btn-create">Создать</a>
             </div>
             <div class="row title-table">
                 <div class="id col-1">id</div>
-                <div class="title col-5">Название</div>
-                <div class="author col-2">Автор</div>
-                <div class="col-4">Изменение</div>
+                <div class="title col-3">Название</div>
+                <div class="author col-2">Дата</div>
+                <div class="col-6">Изменение</div>
             </div>
             <div class="row post">
-                <div class="id col-1">1</div>
-                <div class="title col-5">Мажевеленик... Враг в отражении</div>
-                <div class="author col-2">Артем Курочкин</div>
-                <div class="edit col-2">Редакт.</div>
-                <div class="del col-2">Удалить</div>
-            </div>
-            <div class="row post">
-                <div class="id col-1">1</div>
-                <div class="title col-5">Мажевеленик... Враг в отражении</div>
-                <div class="author col-2">Артем Курочкин</div>
-                <div class="edit col-2">Редакт.</div>
-                <div class="del col-2">Удалить</div>
-            </div>
-            <div class="row post">
-                <div class="id col-1">1</div>
-                <div class="title col-5">Мажевеленик... Враг в отражении</div>
-                <div class="author col-2">Артем Курочкин</div>
-                <div class="edit col-2">Редакт.</div>
-                <div class="del col-2">Удалить</div>
+                <?php foreach ($posts as $key => $post): ?>
+                <div class="id col-1"><?=$key + 1;?></div>
+                <div class="title col-3"><?=$post['title'];?></div>
+                <div class="author col-2"><?=$post['date'];?></div>
+
+                <div class="act edit col-2">Редакт.</div>
+                <div class="act del col-2">Удалить</div>
+                <?php if ($post['status']): ?> <!-- Проверяем значение перед выводом статуса -->
+                    <div class="act edit col-2">В архив</div>
+                <?php else: ?>
+                    <div class="act edit col-2">Вернуть из архива</div>
+                <?php endif; ?>
+
+
+                <?php endforeach;?>
             </div>
         </div>
     </div>

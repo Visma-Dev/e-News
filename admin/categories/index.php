@@ -1,9 +1,7 @@
-<?php include("../../path.php");
+<?php
+    include("../../path.php");
     include '../../app/db/connect.php';
     include "../../app/controllers/categories.php";
-    chmod("/", 777);
-
-session_start();
 ?>
 <!doctype html>
 <html lang="en">
@@ -46,8 +44,8 @@ session_start();
             <div class="row post">
                 <div class="id col-1"><?=$key + 1; ?></div> <!-- к id прибавляем 1, т.к. в массиве список id начинается с 0 -->
                 <div class="title col-5"><?=$category['name'];?></div>
-                <div class="edit col-2"><a href="edit.php?id=<?=$category['id'];?>">Редакт.</a></div>
-                <div class="del col-2"><a href="edit.php?del_id=<?=$category['id'];?>">Удалить</a></div>
+                <div class="act edit col-2"><a href="edit.php?id=<?=$category['id'];?>">Редакт.</a></div>
+                <div class="act del col-2"><a href="edit.php?del_id=<?=$category['id'];?>">Удалить</a></div>
             </div>
             <?php endforeach;?>
         </div>

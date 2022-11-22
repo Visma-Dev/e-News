@@ -46,7 +46,7 @@
                             <p><?php echo $errMessage?></p>
                         </div>
                         <div class="col">
-                            <button name="create" class="btn btn-primary" type="submit">Публикация</button>
+                            <button name="create" class="btn btn-create" type="submit">Создать</button>
                         </div>
                     </div>
                 </form>

@@ -54,9 +54,17 @@ include '../../app/controllers/posts.php';
                             <option value="<?=$key + 1 ?>"><?=$category['name']?></option>
                             <?php endforeach; ?>
                         </select>
-                        <div class="col">
-                            <button name="add_post" class="btn btn-primary" type="submit">Публикация</button>
+                        <!-- errMessage -->
+                        <div class="form-group col-12 col-md-4 error">
+                            <p><?php echo $errMessage?></p>
                         </div>
+                        <div class="buttons row col-5 mb-4">
+                            <button name="add_post" class="btn btn-create" type="submit">Публикация!</button>
+                            <button name="add_post" value="archive" class="btn btn-primary" type="submit">В архив</button>
+                        </div>
+
+
+
                     </div>
                 </form>
             </div>

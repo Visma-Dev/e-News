@@ -8,7 +8,8 @@ $content = '';
 $category = '';
 $img = '';
 
-$categories = selectAll('categories'); //присваиваем названия категорий, для дальнейшего вывода через цикл в админке и /
+$categories = selectAll('categories'); //присваиваем для дальнейшего вывода через цикл в админке и /
+$posts = selectAll('posts');
 
 //! Создание записи (делаем по аналогии с регистрацией юзеров)
 if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_post'])) { //Переменная $_SERVER - это массив, содержащий информацию, такую как: заголовки, пути и местоположения скриптов.
@@ -17,7 +18,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_post'])) { //Пе�
     $title = trim($_POST['title']);
     $content = trim($_POST['content']);
     $img = trim($_POST['img']);
-    $category = trim($_POST['category']);
+    $category = $_POST['category'];
 
     // пишем проверки валидности данных
     if ($title === '' || $content === '' || $category === '') {
@@ -31,14 +32,24 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_post'])) { //Пе�
         if ($exCheck['title'] === $title) {
             $errMessage = 'Запись с таким названием уже существует.';
         }else{
+
+            if (($_POST['add_post']) === 'archive'){
+                $status = 0;
+            }
+            else{
+                $status = 1;
+            }
+
+
             $postData = [ //создаем массив для аргумента $params
                 'author_id' => $_SESSION['id'], // id подтягиваем напрямую из сессии
                 'title' => $title,
                 'img' => $img,
                 'content' => $content,
                 'category_id' => $category,
-                'status' => 1,
+                'status' => $status
             ];
+
             $id = insert('posts', $postData); // применяем функцию добавления записи из functions.php
 
             // после успешно созданной категории редирект на страницу управления категориями
@@ -59,6 +70,7 @@ if($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['update_id'])){ // есл
     $id = $categoryArr['id'];
     $name = $categoryArr['name'];
     $description = $categoryArr['description'];
+
 
 }
 

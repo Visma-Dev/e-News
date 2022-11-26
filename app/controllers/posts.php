@@ -33,7 +33,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_post'])) { //Пе�
             $errMessage = 'Запись с таким названием уже существует.';
         }else{
 
-            if (($_POST['add_post']) === 'archive'){
+            if (($_POST['add_post']) === 'archive'){ // проводим проверку на нажатие кнопки "в архив"
                 $status = 0;
             }
             else{

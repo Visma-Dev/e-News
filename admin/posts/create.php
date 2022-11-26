@@ -51,7 +51,7 @@ include '../../app/controllers/posts.php';
                         <label for="content" class="form-label">Категория</label>
                         <select name="category" class="form-select mb-4" aria-label="Default select example">
                             <?php foreach ($categories as $key => $category): ?>
-                            <option value="<?=$key + 1 ?>"><?=$category['name']?></option>
+                            <option value="<?=$category['id'] ?>"><?=$category['name']?></option>
                             <?php endforeach; ?>
                         </select>
                         <!-- errMessage -->

@@ -30,23 +30,24 @@ include '../../app/controllers/posts.php';
         <div class="col-1"></div>
         <!-- Создание Статьи -->
         <div class="posts col-8">
-            <h1>Создание Статьи:</h1>
+            <h1>Редактирование Статьи:</h1>
             <div class="buttons row col-5 mb-4">
                 <a href="index.php" class="col-4 btn btn-manage">Управление</a>
             </div>
             <div class="row add-post">
-                <form action="create.php" method="post" enctype="multipart/form-data">
+                <form action="edit.php" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="id" value="<?= $id;?>"> <!--Добавляем скрытое поле для хранения id поста даже в случае ошибки -->
                     <div class="col">
                         <div class="col mb-4">
                         <input name="title" type="text" class="form-control" value="<?= $title;?>" placeholder="Название" aria-label="Название Статьи">
                         </div>
                         <div class="col mb-3">
                             <label  for="editor" class="form-label">Содержимое статьи</label>
-                            <textarea name="content" id="editor" class="form-control"  rows="6"<?= $content;?>></textarea>
+                            <textarea name="content" id="editor" class="form-control" rows="6" <?= $content;?></textarea>
                         </div>
                         <div class="input-group col mb-4">
                             <input name="img" type="file" class="form-control" id="inputGroupFile02">
-                            <label class="input-group-text" for="inputGroupFile02">Медиафайлы</label>
+                            <label class="input-group-text" for="inputGroupFile02" >Медиафайлы</label>
                         </div>
                         <label for="content" class="form-label">Категория</label>
                         <select name="category" class="form-select mb-4" aria-label="Default select example">
@@ -59,8 +60,8 @@ include '../../app/controllers/posts.php';
                             <p><?php echo $errMessage?></p>
                         </div>
                         <div class="buttons row col-5 mb-4">
-                            <button name="add_post" class="btn btn-create" type="submit">Публикация!</button>
-                            <button name="add_post" value="archive" class="btn btn-primary" type="submit">В архив</button>
+                            <button name="edit_post" class="btn btn-create" type="submit">Обновить!</button>
+                            <button name="edit_post" value="archive" class="btn btn-primary" type="submit">В архив</button>
                         </div>
 
 

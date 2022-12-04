@@ -37,7 +37,9 @@ session_start();
             </div>
             <div class="row add">
                 <form action="edit.php" method="post">
+
                     <div class="col">
+                        <input type="hidden" name="id" value="<?= $id;?>">
                         <input name="name" value="<?= $name;?>" type="text" class="form-control" placeholder="Название" aria-label="Название Категории">
                         <div class="col">
                             <label for="content" class="form-label">Описание категории</label>

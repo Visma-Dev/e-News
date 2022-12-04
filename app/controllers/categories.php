@@ -58,6 +58,7 @@ if($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['id'])){ // если на
 if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['edit'])) { //Переменная $_SERVER - это массив, содержащий информацию, такую как: заголовки, пути и местоположения скриптов.
 
     // получаем данные от юзера и помещаем их в переменные
+    $id = trim($_POST['id']);
     $name = trim($_POST['name']);
     $description = trim($_POST['description']);
 

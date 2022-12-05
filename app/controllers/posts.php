@@ -94,9 +94,8 @@ if($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['id'])){ // если на
     $content = $postArr['content'];
     $img = $postArr['img'];
     $category_id = $postArr['category_id'];
+    $category_arr = selectOne('categories', ['id' => $category_id]);
     $status = $postArr['status'];
-
-
 }
 
 // Обработка редактирования

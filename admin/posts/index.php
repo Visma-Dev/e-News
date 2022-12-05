@@ -47,9 +47,9 @@
                 <div class="act edit col-2"><a href="edit.php?id=<?=$post['id'];?>">Редакт.</a></div>
                 <div class="act del col-2"><a href="edit.php?del_id=<?=$post['id'];?>">Удалить</a></div>
                 <?php if ($post['status']): ?> <!-- Проверяем значение перед выводом статуса -->
-                    <div class="act edit col-2" name="add_post" value="archive"  type="submit"><a href="edit.php?status=0&stat_id=<?=$post['id'];?>">В архив</a></div>
+                    <div class="act archive col-2" name="add_post" value="archive"  type="submit"><a href="edit.php?status=0&stat_id=<?=$post['id'];?>">В архив</a></div>
                 <?php else: ?>
-                        <div class="act edit col-2"><a href="edit.php?status=1&stat_id=<?=$post['id'];?>">Вернуть из архива</a></div>
+                        <div class="act archive col-2"><a href="edit.php?status=1&stat_id=<?=$post['id'];?>">Вернуть из архива</a></div>
                 <?php endif; ?>
 
 

@@ -51,6 +51,7 @@ include '../../app/controllers/posts.php';
                         </div>
                         <label for="content" class="form-label">Категория</label>
                         <select name="category" class="form-select mb-4" aria-label="Default select example">
+                            <option selected value="<?=$category_id;?>"><?='Текущая: ' .$category_arr['name'];?> </option>
                             <?php foreach ($categories as $key => $category): ?>
                             <option value="<?=$category['id'] ?>"><?=$category['name']?></option>
                             <?php endforeach; ?>

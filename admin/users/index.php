@@ -1,5 +1,6 @@
 <?php include("../../path.php");
 include '../../app/db/connect.php';
+include '../../app/controllers/users.php';
 
 session_start();
 ?>
@@ -32,28 +33,28 @@ session_start();
             <h1>Управление пользователями:</h1>
             <div class="buttons row col-5">
                 <a href="create.php" class="col-4 btn btn-create">Создать</a>
-                <a href="index.php" class="col-4 btn btn-manage">Управление</a>
             </div>
             <div class="row title-table">
                 <div class="id col-1">id</div>
-                <div class="title col-5">email</div>
+                <div class="email col-5">E-mail</div>
                 <div class="author col-2">Статус</div>
                 <div class="col-4">Изменение</div>
             </div>
+            <?php foreach ($users as $key => $user): ?>
             <div class="row post">
-                <div class="id col-1">1</div>
-                <div class="title col-5">vasutcka2001@mail.ru</div>
-                <div class="author col-2">User</div>
-                <div class="edit col-2">Редакт.</div>
-                <div class="del col-2">Удалить</div>
-            </div>
-            <div class="row post">
-                <div class="id col-1">2</div>
-                <div class="title col-5">itgantgay1533@gmail.com</div>
+                <div class="id col-1"><?=$user['id'];?></div>
+                <div class="title col-5"><?=$user['email'];?></div>
+                <!-- знаменитая проверка на админность ... -->
+                <?php if($user['admin'] == 1): ?>
                 <div class="author col-2">Admin</div>
-                <div class="edit col-2">Редакт.</div>
-                <div class="del col-2">Удалить</div>
+                <?php else: ?>
+                <div class="author col-2">User</div>
+                <?php endif; ?>
+
+                <div class="edit col-2"><a href="edit.php?edit_id=<?=$user['id'];?>">Редакт.</a></div>
+                <div class="del col-2"><a href="index.php?del_id=<?=$user['id'];?>">Удалить</a></div>
             </div>
+            <?php endforeach;?>
         </div>
     </div>
 </div>

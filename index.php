@@ -10,6 +10,10 @@ include 'app/db/connect.php';
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>e-News - Все самые свежие новости из мира IT</title>
 
+    <link type="image/x-icon" href="assets/img/fav.jpg" rel="shortcut icon">
+    <link type="Image/x-icon" href="assets/img/fav.jpg" rel="icon">
+
+
 
     <!-- Подключение бутсрэпа -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">

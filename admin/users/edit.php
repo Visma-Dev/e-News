@@ -29,24 +29,25 @@ session_start();
         <div class="col-1"></div>
         <!-- Создание Пользователя -->
         <div class="posts col-8">
-            <h1>Создание Пользователя:</h1>
+            <h1>Редактирование Пользователя: (только пароль и права доступа)</h1>
             <div class="buttons row col-5">
                 <a href="index.php" class="col-4 btn btn-manage">Управление</a>
             </div>
             <div class="row add">
-                <form action="create.php" method="post">
+                <form action="edit.php" method="post">
+                    <input type="hidden" name="id" value="<?= $id;?>"> <!--Добавляем скрытое поле для хранения id поста даже в случае ошибки -->
                     <div class="сol">
                         <label for="exampleInputLogin"><i class="fa-solid fa-hashtag"></i> Никнейм пользователя</label>
-                        <input name="login" value="<?=$login?>" type="text" class="form-control" id="exampleInputLogin" aria-describedby="emailHelp" placeholder="Введите логин">
+                        <input readonly name="login" value="<?=$login?>" type="text" class="form-control" id="exampleInputLogin" aria-describedby="emailHelp" placeholder="Введите логин">
                     </div>
                     <div class="w-100"></div>
                     <div class="col">
                         <label for="exampleInputEmail1"><i class="fa-solid fa-envelope"></i> Email</label>
-                        <input name="email" value="<?=$email?>" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите свой почтовый ящик">
+                        <input readonly name="email" value="<?=$email?>" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите свой почтовый ящик"><!--почту редактировать не разрешаем, поэтому только чтение-->
                     </div>
                     <div class="w-100"></div>
                     <div class="col">
-                        <label for="exampleInputPassword1"><i class="fa-solid fa-lock"></i> Пароль</label>
+                        <label for="exampleInputPassword1"><i class="fa-solid fa-lock"></i> Создать новый пароль</label>
                         <input name="pass_f" type="password" class="form-control" id="exampleInputPassword1" placeholder="Придуймайте пароль">
                     </div>
                     <div class="w-100"></div>
@@ -68,7 +69,7 @@ session_start();
 
                     <div class="col">
                         <div class="col">
-                            <button name="create_user" class="btn btn-primary" type="submit">Зарегистр.</button>
+                            <button name="update_user" class="btn btn-primary" type="submit">Обновить</button>
                         </div>
                     </div>
                 </form>

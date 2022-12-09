@@ -64,9 +64,6 @@ include '../../app/controllers/posts.php';
                             <button name="edit_post" class="btn btn-create" type="submit">Обновить!</button>
                             <button name="edit_post" value="archive" class="btn btn-primary" type="submit">В архив</button>
                         </div>
-
-
-
                     </div>
                 </form>
             </div>

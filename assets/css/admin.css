@@ -158,3 +158,22 @@ creat.php
 .error{
     color: #ff004b;
 }
+
+label{
+    color: #ffffff;
+}
+label i {
+    color: #8d2cff;
+}
+
+.form-check{
+    max-width: 4em; /* блок занимает ширину родителя, max-width её ограничивает */
+    min-height: 2em;
+    margin-right: auto;
+}
+
+.admin-check{
+    max-width: 20px;
+}
+
+

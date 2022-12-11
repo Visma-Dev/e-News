@@ -1,10 +1,14 @@
-<?php include("path.php");?>
+<?php include("path.php");
+include 'app/db/functions.php';
+$post = selectOne('posts', ['id' => $_GET['post']]);
+
+?>
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>e-Blog</title>
+    <title><?= 'e-News - ' . mb_substr($post['title'], 0, 200, 'UTF-8');?></title>
 
 
     <!-- Подлкючение бутсрэпа -->
@@ -24,18 +28,16 @@
 
         <!-- Posts -->
         <div class="main-content col-md-8 col-12">
-            <h2>Утечка: новый Samsung Unpacked пройдёт 10 августа. На нём покажут Galaxy Z Flip 4</h2>
+            <h2><?=$post['title'];?></h2>
             <div class="single_post row">
                 <div class="post-text">
-                    <img src="assets/img/post-1.webp" alt="post-photo">
+                    <img src="<?=BASE_URL . 'assets/img/posts/' . $post['img'];?>" alt="<?=$post['title'];?>">
                     <div class="data-icons">
-                        <i class="far fa-calendar"> 18 Июля</i>
-                        <i class="far fa-user"> Константин Воронин</i>
+                        <i class="far fa-calendar"><?=' ' .substr($post['date'], 0, 10)?></i>
+                        <?php $author = selectOne('users', ['id' => $post['author_id']]);?>
+                        <i class="far fa-user"><?=' '. $author['username'];?></i>
                     </div>
-                    <p class="preview-text">Инсайдер @evleaks опубликовал в Twitter рекламный постер, на котором написано, что следующее мероприятие Samsung Galaxy Unpacked стартует 10 августа 2022 года.</p>
-                    <p>На изображении показан новый складной смартфон Galaxy Z Flip 4 в фиолетовом цвете. Но это будет не единственная новинка — на этой же презентации состоится премьера Galaxy Z Fold 4, и, возможно, ещё нескольких устройств, включая умные часы Galaxy Watch 5.</p>
-                    <img src="assets/img/post-1(2).jpg">
-                    <p>Ранее источники сообщали, что Samsung начнёт принимать предварительные заказы на новые складные смартфоны с 16 августа, а в продажу они якобы поступят в конце месяца.</p>
+                    <p class="preview-text"><?=$post['content'];?></p>
                     <i class="fa-solid fa-heart like action-icons"></i>
                     <i class="fa-solid fa-heart-crack dislike action-icons"></i>
                     <i class="fa-solid fa-comment action-icons"></i>

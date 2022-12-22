@@ -1,5 +1,5 @@
 <?php
-include DIR_ROOT."/app/db/functions.php";
+
 
 $errMessage = '';
 $id = '';

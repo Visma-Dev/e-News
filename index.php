@@ -1,6 +1,9 @@
 <?php
 include "path.php";
+include 'app/db/functions.php';
 include 'app/db/connect.php';
+
+$sliderPosts = selectAll('posts', ['slider' => 1]); // заносим все слайдерные посты в переменную
 ?>
 
 <!doctype html>
@@ -29,32 +32,23 @@ include 'app/db/connect.php';
 <!--Carousel-->
 <div class="container">
     <div class="row">
-        <h2 class="carousel-title">Популярное:</h2>
+        <h2 class="carousel-title"></h2>
     </div>
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img id="slider-img" src="assets/img/carousel1.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5><a href="#">Dbrand выпустила чехлы, которые превращают смартфон в аналог Nothing Phone (1)</a></h5>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="assets/img/carousel2.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5><a href="#">В сеть попали рекомендованные цены на десктопные видеокарты Intel Arc A770, A750 и A580</a></h5>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="assets/img/carousel3.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5><a href="#">Google выпустила финальную бета-версию Android 13</a></h5>
-                </div>
+            <div class="carousel-inner">
+                <?php foreach ($sliderPosts as $key => $post):?> <!-- Выводим посты с помощью цикла -->
+                    <?php if($key == 0):?> <!-- Класс active даем только первому слайду -->
+                    <div class="carousel-item active">
+                    <?php else:?>
+                    <div class="carousel-item">
+                    <?php endif;?>
+                        <img src="<?=BASE_URL . 'assets/img/posts/' . $post['img'];?>" alt="<?=$post['title'];?>" class="d-block w-100">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5><a href="<?=BASE_URL . 'single.php?post=' . $post['id'];?>"><?=mb_substr($post['title'], 0, 200, 'UTF-8');?></a></h5>
+                        </div>
+                    </div>
+                <?php endforeach;?>
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">

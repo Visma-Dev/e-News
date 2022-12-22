@@ -33,15 +33,21 @@ $post = selectOne('posts', ['id' => $_GET['post']]);
                 <div class="post-text">
                     <img src="<?=BASE_URL . 'assets/img/posts/' . $post['img'];?>" alt="<?=$post['title'];?>">
                     <div class="data-icons">
-                        <i class="far fa-calendar"><?=' ' .substr($post['date'], 0, 10)?></i>
+                        <span><i class="far fa-calendar"></i><?=' ' .substr($post['date'], 0, 10)?></span>
                         <?php $author = selectOne('users', ['id' => $post['author_id']]);?>
-                        <i class="far fa-user"><?=' '. $author['username'];?></i>
+                        <span><i class="far fa-user"></i><?=' '. $author['username'];?></span>
                     </div>
-                    <p class="preview-text"><?=$post['content'];?></p>
-                    <i class="fa-solid fa-heart like action-icons"></i>
-                    <i class="fa-solid fa-heart-crack dislike action-icons"></i>
-                    <i class="fa-solid fa-comment action-icons"></i>
-                    <i class="fa-solid fa-share action-icons"></i>
+                    <p class="preview-text"><?=$post['content']?></p>
+                    <div class="icons-block">
+                        <div class="icons1">
+                            <input hidden name="like" value="<?=$post['id'];?>"><button type="button"><i class="fa-solid fa-heart like action-icons"></i></input></button><span>17</span>
+                            <button name="dislike"><i class="fa-solid fa-heart-crack dislike action-icons"></i></button><span>3</span>
+                            <button><i class="fa-solid fa-comment action-icons"></i></button><span>2</span>
+                        </div>
+                        <div class="icons2">
+                            <button><i class="fa-solid fa-share action-icons"></i><button>
+                        </div>
+                    </div>
                     <!--<div class="share-icons">
                         <i class="fa-solid fa-share"></i>
                     </div>-->

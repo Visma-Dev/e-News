@@ -4,7 +4,7 @@ include ("app/controllers/categories.php");
 $posts = selectAll('posts', ['status' => 1]);//выводим все посты, кроме архивных.
 ?>
 
-<div class="container-main">
+<div class="container-main" xmlns="http://www.w3.org/1999/html">
     <div class="content row">
 
         <!-- Posts -->
@@ -18,20 +18,55 @@ $posts = selectAll('posts', ['status' => 1]);//выводим все посты,
                             <a href="<?=BASE_URL . 'single.php?post=' . $post['id'];?>"><?=mb_substr($post['title'], 0, 200, 'UTF-8');?></a>
                         </h3>
                         <div class="data-icons">
-                            <i class="far fa-calendar"> <?=substr($post['date'], 0, 10)?></i>
-                            <!-- выводим имя автора, делая запрос к бд через id -->
-                            <?php $author = selectOne('users', ['id' => $post['author_id']]);?>
-                            <i class="far fa-user"><?=' '. $author['username'];?></i>
+                            <!-- выводим название категории, делая запрос к бд через id -->
+                            <?php $category = selectOne('categories', ['id' => $post['category_id']]);?>
+                            <span><i class="fa-solid fa-quote-left"></i><?=' '. $category['name'];?></span>
+
+                            <span><i class="far fa-calendar"></i> <?=substr($post['date'], 0, 10)?></span>
                         </div>
                         <p class="preview-text"><?=mb_substr($post['content'], 0, 200, 'UTF-8') . '...';?></p>
-                        <i class="fa-solid fa-heart like action-icons"></i>
-                        <i class="fa-solid fa-heart-crack dislike action-icons"></i>
-                        <i class="fa-solid fa-comment action-icons"></i>
-                        <i class="fa-solid fa-share action-icons"></i>
+                        <div class="icons-block">
+                            <div class="icons1">
+                                <i class="fa-solid fa-heart like action-icons"></i><span class="value"></span>
+                                <i class="fa-solid fa-heart-crack dislike action-icons"></i><span class="value"></span>
+
+                            </div>
+                            <div class="icons2">
+                                <i class="fa-solid fa-comment action-icons"></i><span class="ajax"></span>
+                                <i class="fa-solid fa-share action-icons"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
             <?php endforeach; ?>
+
         </div>
+            <!-- Ajax запрос для обработки лайков/дизов -->
+            <!--<script type="text/javascript">
+                const dd = document;
+                let blocks = dd.querySelectorAll(".j");
+                let url = 'app/controllers/ajax.php'
+
+                function ajax (data, url, objectClass){
+                    let param = 'data=' + data
+                    let request = new XMLHttpRequest();
+                    request.open ('POST', url, true);
+                    request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                    request.send(param)
+                    request.addEventListener('readystatechange', () => {
+                        if (request.readyState === 4 && request.status === 200) {
+                            dd.querySelector(objectClass).innerHTML = request.responseText
+                        }
+                    })
+                }
+                for (let i = 0; i < blocks.length; i++) {
+                    let data = blocks[i].getAttribute('ajax')
+                    blocks[i].onclick = () => {
+                        ajax(data, url, '.value')
+                    }
+                }
+            </script>-->
+
         <!-- Sidebar -->
         <div class="sidebar col-md-4 col-12">
             <div class="section search">

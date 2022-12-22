@@ -137,6 +137,12 @@ POSTS
     font-size: 15px;
 }
 
+.slider a{
+    color: rgb(65, 236, 255);
+    text-decoration: none;
+    font-size: 15px;
+}
+
 .act{
 
     text-align: center !important;

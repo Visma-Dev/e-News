@@ -60,6 +60,7 @@ body{
     color: rgba(210, 9, 255, 0.64);
 }
 
+
 /*-----main------*/
 .container-main{
     width: 100%;
@@ -86,7 +87,7 @@ body{
 .main-content h2{
     margin-top: 30px;
     margin-bottom: 20px;
-    color: #5119d3;;
+    color: #ffffff;
 }
 
 .main-content .post{
@@ -103,7 +104,7 @@ body{
 }
 
 .main-content .post-text h3{
-    margin-top: 15px;
+
 }
 .main-content .post-text h3 a{
     text-decoration: none;
@@ -120,24 +121,59 @@ body{
     font-size: 17px;
 }
 .data-icons{
+    max-height: 20px;
     color: rgba(213, 213, 229, 0.51);
-    margin-bottom: 10px;
-    margin-left: 5px;
+    margin-bottom: 20px;
+    margin-left: 2px;
     font-size: 15px;
+}
+
+.icons-block{
+    display: flex;
+}
+.icons1{
+    max-width: 150px;
+}
+
+.icons2{
+    margin-left: 10px;
+    max-width: 90px;
+}
+
+.post i{
+    max-height: 30px;
+    max-width: 30px;
+    margin-left: 6px;
+
+    cursor: pointer; /* Mouse pointer on hover */
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.post .data-icons span{
+    color: rgba(98, 68, 251, 0.82);;
+}
+.post .icons-block span{
+    font-size: 15px;
+    margin-left: 1px;
+    color: #866eff;
+    font-weight: bold;
 }
 
 .action-icons{
     font-size: 22px;
-    margin-left: 10px;
-    margin-bottom: 10px;
+
     color: rgba(255, 255, 255, 0.4);
     transition: 0.2s;
-    margin-bottom: 22px;
+    margin-bottom: 25px;
 }
 .action-icons:hover{
-    color: #6238fc;
+    color: #a10deb;
 }
 
+.liked{
+    color: #eb0d57;
+}
 .post:last-child{
     margin-bottom: 45px;
 }

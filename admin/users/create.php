@@ -54,7 +54,6 @@ session_start();
                         <label for="exampleInputPassword2"><i class="fa-solid fa-key"></i> Подтвердите пароль</label>
                         <input name="pass_s" type="password" class="form-control" id="exampleInputPassword2" placeholder="Повторно введите и запомните пароль">
                     </div>
-                    <div class="w-100"></div>
                     <div class="form-check">
                         <label for="flexCheckChecked">
                             Админ

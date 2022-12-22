@@ -70,7 +70,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_post'])) { //Пе�
                 'img' => $_POST['img'],
                 'content' => $content,
                 'category_id' => $category,
-                'status' => $status
+                'status' => $status,
             ];
 
             $finalId = insert('posts', $postData); // применяем функцию добавления записи из functions.php
@@ -146,7 +146,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['edit_post'])) { //Пе
 }
 
 //! Архив
-if($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['stat_id'])) { // если находим в get запросе строку "del_id", то:
+if($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['stat_id'])) { // если находим в get запросе строку "stat_id", то:
 
     $id = $_GET['stat_id'];// получаем id выбранного поста
     $status = $_GET['status'];
@@ -155,6 +155,19 @@ if($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['stat_id'])) { // есл�
 
     header('location: ' . BASE_URL . 'admin/posts/index.php');
 }
+
+
+//! Слайдер
+if($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['slide_id'])) { // если находим в get запросе строку "slide_id", то:
+
+    $id = $_GET['slide_id'];// получаем id выбранного поста
+    $slider = $_GET['slider'];
+
+    $finalId = update('posts', $id, ['slider' => $slider]);
+
+    header('location: ' . BASE_URL . 'admin/posts/index.php');
+}
+
 //! Удаление
 if($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['del_id'])){ // если находим в get запросе строку "del_id", то:
 
@@ -162,3 +175,7 @@ if($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['del_id'])){ // если 
     delete('posts', $id);
     header('location: ' . BASE_URL . 'admin/posts/index.php' );
 }
+
+
+// Лайки & Дизлайки
+

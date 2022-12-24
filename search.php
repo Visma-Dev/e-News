@@ -7,6 +7,8 @@ include 'app/db/connect.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['search-term']){
     $posts = search($_POST['search-term'], 'posts', 'users');
 }
+
+rsort($posts);
 ?>
 
 <!doctype html>
@@ -72,32 +74,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['search-term']){
             <?php endforeach; ?>
         </div>
         <?php endif; ?>
-        <!-- Ajax запрос для обработки лайков/дизов -->
-        <!--<script type="text/javascript">
-            const dd = document;
-            let blocks = dd.querySelectorAll(".j");
-            let url = 'app/controllers/ajax.php'
-
-            function ajax (data, url, objectClass){
-                let param = 'data=' + data
-                let request = new XMLHttpRequest();
-                request.open ('POST', url, true);
-                request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-                request.send(param)
-                request.addEventListener('readystatechange', () => {
-                    if (request.readyState === 4 && request.status === 200) {
-                        dd.querySelector(objectClass).innerHTML = request.responseText
-                    }
-                })
-            }
-            for (let i = 0; i < blocks.length; i++) {
-                let data = blocks[i].getAttribute('ajax')
-                blocks[i].onclick = () => {
-                    ajax(data, url, '.value')
-                }
-            }
-        </script>-->
-
     </div>
 </div>
 

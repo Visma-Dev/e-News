@@ -1,8 +1,8 @@
 <?php
     include("../../path.php");
     include '../../app/db/connect.php';
-    include '../../app/db/functions.php';
-    include "../../app/controllers/categories.php";
+
+    include_once "../../app/controllers/categories.php";
 ?>
 <!doctype html>
 <html lang="en">

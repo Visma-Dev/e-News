@@ -1,7 +1,7 @@
 <?php
-include ("app/controllers/categories.php");
 
 $posts = selectAll('posts', ['status' => 1]);//выводим все посты, кроме архивных.
+rsort($posts);
 ?>
 
 <div class="container-main" xmlns="http://www.w3.org/1999/html">

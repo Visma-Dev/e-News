@@ -1,6 +1,7 @@
 <?php
     include("../../path.php");
     include "../../app/controllers/posts.php";
+    rsort($posts);
 ?>
 <!doctype html>
 <html lang="en">
@@ -40,7 +41,7 @@
             </div>
             <div class="row post">
                 <?php foreach ($posts as $key => $post): ?>
-                <div class="id col-1"><?=$key + 1;?></div>
+                <div class="id col-1"><?=$post['id'];?></div>
                 <div class="title col-3"><?=$post['title'];?></div>
                 <div class="author col-2"><?=$post['date'];?></div>
 

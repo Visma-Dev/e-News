@@ -1,9 +1,10 @@
 <?php
-include "path.php";
-include 'app/db/functions.php';
-include 'app/db/connect.php';
+include_once "path.php";
+include_once 'app/db/connect.php';
+include_once ("app/controllers/categories.php");
 
 $sliderPosts = selectAll('posts', ['slider' => 1]); // заносим все слайдерные посты в переменную
+rsort($sliderPosts);
 ?>
 
 <!doctype html>
@@ -63,7 +64,7 @@ $sliderPosts = selectAll('posts', ['slider' => 1]); // заносим все с�
 </div>
 
 <!-- Main-block -->
-<?php include "app/include/recent.php"?>
+<?php include_once "app/include/recent.php"?>
 
 <!-- Footer -->
 <?php include("app/include/footer.php");?>

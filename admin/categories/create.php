@@ -1,5 +1,4 @@
 <?php include("../../path.php");
-
     include '../../app/db/connect.php';
     include '../../app/controllers/categories.php';
 ?>

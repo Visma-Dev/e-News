@@ -1,5 +1,5 @@
 <?php
-
+include_once 'app/db/functions.php';
 
 $errMessage = '';
 $id = '';

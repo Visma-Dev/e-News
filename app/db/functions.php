@@ -134,4 +134,16 @@ function delete($table, $id){
     checkError($query);
 }
 
+// Поиск на главной
+function search($text, $table1, $table2){
+    $text = trim(strip_tags(stripcslashes(htmlspecialchars($text))));
+    global $pdo;
+    $sql= "SELECT p.*, u.username FROM $table1 AS p JOIN $table2 as u ON p.author_id = u.id WHERE p.status=1 AND p.title LIKE '%$text%' OR p.content LIKE '%$text%'";
+
+    $query = $pdo->prepare($sql);
+    $query->execute();
+    checkError($query);
+    return $query->fetchAll();
+}
+
 

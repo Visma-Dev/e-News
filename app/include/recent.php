@@ -71,7 +71,7 @@ $posts = selectAll('posts', ['status' => 1]);//выводим все посты,
         <div class="sidebar col-md-4 col-12">
             <div class="section search">
                 <h3>Поиск</h3>
-                <form action="recent.php" method="post">
+                <form action="/search.php" method="post">
                     <input type="text" name="search-term" class="text-input" placeholder="по сайту">
                 </form>
             </div>

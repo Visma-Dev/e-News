@@ -1,5 +1,5 @@
 <?php include("path.php");
-include 'app/db/functions.php';
+include 'app/controllers/categories.php';
 $post = selectOne('posts', ['id' => $_GET['post']]);
 
 ?>
@@ -66,10 +66,9 @@ $post = selectOne('posts', ['id' => $_GET['post']]);
             <div class="section topics">
                 <h3>Разделы:</h3>
                 <ul>
-                    <li><a href="#">Технологии</a></li>
-                    <li><a href="#">Кино</a></li>
-                    <li><a href="#">Игры</a></li>
-                    <li><a href="#">Санкции</a></li>
+                    <?php foreach ($categories as $key => $category): ?>
+                        <li><a href="<?=BASE_URL . 'category.php?id=' . $category['id']; ?> <?=$category['name'];?>"><?=$category['name'];?></a></li>
+                    <?php endforeach; ?>
                 </ul>
             </div>
 

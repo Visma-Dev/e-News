@@ -64,7 +64,7 @@ rsort($sliderPosts);
 </div>
 
 <!-- Main-block -->
-<?php include_once "app/include/recent.php"?>
+<?php include_once "app/include/recent.php";?>
 
 <!-- Footer -->
 <?php include("app/include/footer.php");?>

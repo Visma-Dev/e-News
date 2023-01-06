@@ -147,3 +147,25 @@ function search($text, $table1, $table2){
 }
 
 
+function countRows($table){
+    global $pdo;
+    $sql = "SELECT COUNT(*) FROM $table WHERE status = 1";
+
+    $query = $pdo->prepare($sql);
+    $query->execute();
+    checkError($query);
+    return $query->fetchColumn();
+}
+
+// функция вывода постов с заданными лимитом и смещением
+function selectAllWithLimit($table, $limit, $offset) {
+    global $pdo;
+    $sql = "SELECT * FROM $table  WHERE status = 1 ORDER BY date DESC LIMIT $limit OFFSET $offset";
+
+    $query = $pdo->prepare($sql);
+    $query->execute();
+
+    checkError($query);
+    return $query->fetchAll();
+}
+

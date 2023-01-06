@@ -1,7 +1,12 @@
 <?php
+// переменные для пагинации
+$pageNumber = isset($_GET['page']) ? $_GET['page'] : 1 ; // если get параметр страницы отсутствует, задаем значение 1, если все норм - просто принимаем его
+$postsLimit = 5; // лимит постов на одной странице
+$offset = $postsLimit * ($pageNumber - 1); // Число сдвигаемых постов. Умножаем наш лимит на (номер страницы - 1)
+$totalPage = ceil(countRows('posts') / $postsLimit); // итоговое кол-во страниц. подсчитываем кол-во строк и делим на кол-во записей на стр., после чего округляем, дабы не получить дробь
 
-$posts = selectAll('posts', ['status' => 1]);//выводим все посты, кроме архивных.
-rsort($posts);
+$posts = selectAllWithLimit('posts', $postsLimit, $offset);// вывод постов с лимитом предназначенным для пагинации
+
 ?>
 
 <div class="container-main" xmlns="http://www.w3.org/1999/html">
@@ -39,6 +44,9 @@ rsort($posts);
                     </div>
                 </div>
             <?php endforeach; ?>
+
+            <!-- пагинация -->
+            <?php require_once "app/include/pagination.php"?>
 
         </div>
             <!-- Ajax запрос для обработки лайков/дизов -->

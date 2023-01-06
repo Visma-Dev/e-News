@@ -222,7 +222,19 @@ body{
 }
 
 
+/*-----@Pagination------*/
 
+.pagination{
+    margin-left: 250px;
+}
+.page-item{
+    --bs-pagination-bg: #191919 !important;
+}
+
+.page-link{
+    color: #6222f7 !important;
+    border: rgba(0, 0, 0, 0.78) !important;
+}
 
 
 
@@ -307,6 +319,4 @@ body{
     .main-content .post p{
         font-size: 15px;
     }
-
-
 }

@@ -252,6 +252,43 @@ button{
     color: rgba(140, 9, 255, 0.78);
 }
 
+/*--Comments--*/
+
+.comments_block h3 {color: #7644ff;}
+
+.comments_block button {
+    color: #949494;
+    font-size: 20px;
+    margin-right: 10px;
+    float: right;
+}
+
+.comments_list{
+    margin-top: 50px;
+}
+
+.def_comment{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-bottom: 2px solid rgba(200, 183, 255, 0.58);
+}
+
+.def_comment i{color: #6238fc}
+
+.comments_block .content{
+    margin-top: 5px;
+    margin-bottom: 3px;
+}
+
+.comments_block .date{
+    font-size: 15px;
+    color: #73738e;
+}
+
+.comments_block .fa-trash{
+
+    color: rgba(255, 0, 75, 0.5);
+}
 
 /*-----footer------*/
 footer{
@@ -310,4 +347,9 @@ footer h3 a:hover{
     padding-top: 20px;
     padding-bottom: 15px;
     font-size: 13px;
+}
+
+
+.error{
+    color: #ff004b;
 }

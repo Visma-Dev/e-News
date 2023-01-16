@@ -33,24 +33,27 @@ $post = selectOne('posts', ['id' => $_GET['post']]);
                 <div class="post-text">
                     <img src="<?=BASE_URL . 'assets/img/posts/' . $post['img'];?>" alt="<?=$post['title'];?>">
                     <div class="data-icons">
-                        <span><i class="far fa-calendar"></i><?=' ' .substr($post['date'], 0, 10)?></span>
+                        <!-- выводим название категории, делая запрос к бд через id -->
+                        <?php $category = selectOne('categories', ['id' => $post['category_id']]);?>
+                        <span><i class="fa-solid fa-quote-left"></i><?=' '. $category['name'];?></span>
+
                         <?php $author = selectOne('users', ['id' => $post['author_id']]);?>
                         <span><i class="far fa-user"></i><?=' '. $author['username'];?></span>
                     </div>
                     <p class="preview-text"><?=$post['content']?></p>
                     <div class="icons-block">
                         <div class="icons1">
-                            <input hidden name="like" value="<?=$post['id'];?>"><button type="button"><i class="fa-solid fa-heart like action-icons"></i></input></button><span>17</span>
-                            <button name="dislike"><i class="fa-solid fa-heart-crack dislike action-icons"></i></button><span>3</span>
-                            <button><i class="fa-solid fa-comment action-icons"></i></button><span>2</span>
+                            <input hidden name="like" value="<?=$post['id'];?>"><button type="button"><i class="fa-solid fa-heart like action-icons"></i></input></button><span></span>
+                            <button name="dislike"><i class="fa-solid fa-heart-crack dislike action-icons"></i></button><span></span>
+                            <button><i class="fa-solid fa-comment action-icons"></i></button><span></span>
                         </div>
                         <div class="icons2">
                             <button><i class="fa-solid fa-share action-icons"></i><button>
                         </div>
                     </div>
-                    <!--<div class="share-icons">
-                        <i class="fa-solid fa-share"></i>
-                    </div>-->
+
+                    <!-- Комментарии -->
+                    <?php  require_once DIR_ROOT . '/app/include/comments.php'; ?>
                 </div>
             </div>
         </div>
@@ -58,7 +61,7 @@ $post = selectOne('posts', ['id' => $_GET['post']]);
         <div class="sidebar col-md-4 col-12">
             <div class="section search">
                 <h3>Поиск</h3>
-                <form action="index.php" method="post">
+                <form action="/search.php" method="post">
                     <input type="text" name="search-term" class="text-input" placeholder="по сайту">
                 </form>
             </div>

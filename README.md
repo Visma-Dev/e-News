@@ -5,8 +5,8 @@
 
 
 <h1><em>e-News - <font color="red">my first project.</font></em></h1>
-<p><strong>Attention!</strong> I'm not proud of this project because it uses a lot of wrong practices, shitty code, and, after all, it's mostly written in a procedural way.
-<br><strong>But!</strong> thanks to him, I got my first knowledge and experience in php and the backend in general.</p>
+<p>(<strong>Attention!</strong> I'm not proud of this project because it uses a lot of wrong practices, shitty code, and, after all, it's mostly written in a procedural way.
+<br><strong>But!</strong> thanks to it, I got my first knowledge and experience in php and in the backend in general.)</p>
 <p>
    <img src="https://img.shields.io/badge/-php-blue">
    <img src="https://img.shields.io/badge/-MySQL-important">
@@ -16,7 +16,7 @@
 
 ## 🟣 What is it?
 
-<p>e-News is my first full-fledged web-dev project written in basic php, mainly by the procedural method.</p>
+<p>e-News is my first full-fledged web-project written in basic php, mainly by the procedural method.</p>
 
 <p>
 <h4 style="background-color:powderblue;">The goals of this project were:</h4>
@@ -82,7 +82,7 @@
 
 <div align="center">
 <h3>▫️Comments for posts</h3>
-<p><em>A block under each post with a form for writing a comment, as well as a list of all previously written comments for this post.</em></p>
+<p><em>Blocks under posts with a form for writing comments, as well as a list of all previously comments for this post.</em></p>
 <p>
 <table>
 <tr>
@@ -100,7 +100,7 @@
 <br>
 
 <div align="center">
-<h3>▫️As well as many other smaller functions:</h3>
+<h3>▫️As well as other, not so big features:</h3>
 <p><em>Searching for posts, pagination, working with a slider, etc.</em></p>
 <p>
 <table>
